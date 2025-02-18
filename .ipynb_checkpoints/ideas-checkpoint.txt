@@ -1,0 +1,36 @@
+*Primary Resources:
+https://www.mdpi.com/2306-5729/8/6/95
+https://openneuro.org/datasets/ds004504/versions/1.0.8
+
+
+*Synthetic Data:
+Can make GAN's to make synthetic data. The generator creates synthetic data while discriminator evaluates if data real or fabricated. Applying this for EEG data has promise. Study by song et al (2021) used GAN to synthesize EEG features to enhance AD diagnostic model. Also Che et al. (2023) proposed diffusion model-based framework to generate high-quality artificial EEG data, ot improve AD diagnosis model. Need make sure the data is well made and good :).
+
+*Prior Publications
+mdpi --> "Prior to the publication of this dataset, two studies regarding machine learning methodologies for the classification or severity quantification of AD and FTD have been published, using a subset of participants [2,14]."
+
+*Current Data Notes:
+
+Everyone in control got a score of exactly 30.
+Be careful normalizing the data since hte RBP (relative band power) of the frequencies are big signifiers of AD (reduced theta increased alpha)
+
+
+
+*Tools
+EEG lab for matlab
+
+ (C) A sub-0XX_task-eyesclosed_eeg.set file, which contains the EEG recordings of the participant in a .set format, which is one of the four BIDS-allowed EEG formats (those being the European data format .edf, the BrainVision Core Data Format .vhdr or .eeg, the EEGLAB format .set, and the Biosemi format .bdf). The following two facts should be noted. First, the .set files contain all the necessary recording information; thus, they can also be accessed in a non-BIDS setting. Second, the sub-0XX_task-eyesclosed_channels.tsv and sub-0XX-task_eyesclosed_eeg.json files are the same for each participant, since the same recording setting has been used (except for the recording duration information, which differs); thus, users do not need to examine all of them. (5) The folder derivatives, which contain subfolders with the same structure described before, with the difference that the EEG recordings are preprocessed.
+
+*Questions, Curiousities 
+Moreover, according to the literature, AD patients exhibit changes in the RBP such as reduced alpha power and increased theta power.
+In this paper, the EEG signals were first epoched to 4 s time windows with 50% overlap to create the population of the dataset that would be used for classification. Each epoch was labeled as AD, FTD, or CN.
+
+Terms review:
+RPB, 
+Power Spectral Density (PSD),
+Welch Method,
+
+Leave-One-Subject-Out (LOSO) validation method 
+
+
+
