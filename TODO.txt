@@ -1,3 +1,1 @@
-*I think we are using the noisy data here , as the path to derivaivesPath(sub) seems to be pointing to the noisy data
-*We need to multithread data creation 
-*We need to do the 3 way combo of AD-CN FD-CN and AD-FN for all 3 ml models
+#Need to figure out this rundime warning when using hte derivaives " /var/folders/l1/yg4p3qp10vq4pn5lyx21tcdr0000gq/T/ipykernel_76858/1136678099.py:37: RuntimeWarning: The data contains 'boundary' events, indicating data discontinuities. Be cautious of filtering and epoching around these events." .... I think we should remove all of this boundaries that are discontinous andsmash the whole recording togetherso that there aren't any gaps if I am understanding that there are holes or warnings when there is eye/jaw movement
